@@ -14,7 +14,13 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Caravel user project includes
--v $(USER_PROJECT_VERILOG)/rtl/user_project_wrapper.v	     
--v $(USER_PROJECT_VERILOG)/rtl/user_proj_example.v
+-v $(USER_PROJECT_VERILOG)/rtl/wishbone_bus_splitter.v
+-v $(USER_PROJECT_VERILOG)/rtl/user_project.v
+-v $(USER_PROJECT_VERILOG)/rtl/user_project_wrapper.v
 
- 
+# EF_GPIO8 IP core files
+-v $(USER_PROJECT_VERILOG)/../ip/EF_GPIO8/hdl/rtl/EF_GPIO8.v
+-v $(USER_PROJECT_VERILOG)/../ip/EF_GPIO8/hdl/rtl/bus_wrappers/EF_GPIO8_WB.v
+
+# EF_IP_UTIL (dependency for EF_GPIO8)
+-v $(USER_PROJECT_VERILOG)/../ip/EF_IP_UTIL/hdl/ef_util_lib.v
